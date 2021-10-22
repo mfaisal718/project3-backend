@@ -37,7 +37,7 @@ mongoose.connection
 ////////////////////////////////
 const PlayerSchema = new mongoose.Schema({
     name: String,
-    Position: String,
+    position: String,
     image: String,
 
 });
