@@ -36,6 +36,7 @@ mongoose.connection
 // MODELS
 ////////////////////////////////
 const PlayerSchema = new mongoose.Schema({
+    _id: String,
     name: String,
     position: String,
     image: String,
