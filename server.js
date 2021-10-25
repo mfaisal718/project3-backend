@@ -78,7 +78,7 @@ app.post("/player", async (req, res) => {
     }
 });
 // Player DELETE ROUTE
-app.delete("/player", async (req, res) => {
+app.delete("/player/:id", async (req, res) => {
     try {
         // send all player
         res.json(await Player.findByIdAndRemove(req.params.id));
@@ -89,7 +89,7 @@ app.delete("/player", async (req, res) => {
 });
 
 // Player UPDATE ROUTE
-app.put("/player", async (req, res) => {
+app.put("/player/:id", async (req, res) => {
     try {
         // send all player
         res.json(
