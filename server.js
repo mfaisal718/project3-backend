@@ -58,7 +58,7 @@ app.get("/", (req, res) => {
     res.send("hello world");
 });
 // Player INDEX ROUTE
-app.get("/player", async (req, res) => {
+app.get("/", async (req, res) => {
     try {
         // send all player
         res.json(await Player.find({}));
@@ -69,7 +69,7 @@ app.get("/player", async (req, res) => {
 });
 
 // Player CREATE ROUTE
-app.post("/player", async (req, res) => {
+app.post("/", async (req, res) => {
     try {
         // send all player
         res.json(await Player.create(req.body));
