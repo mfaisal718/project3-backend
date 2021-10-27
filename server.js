@@ -36,7 +36,6 @@ mongoose.connection
 // MODELS
 ////////////////////////////////
 const PlayerSchema = new mongoose.Schema({
-    _id: String,
     name: String,
     position: String,
     image: String,
@@ -69,7 +68,7 @@ app.get("/player", async (req, res) => {
 });
 
 // Player CREATE ROUTE
-app.post("/", async (req, res) => {
+app.post("/player", async (req, res) => {
     try {
         // send all player
         res.json(await Player.create(req.body));
